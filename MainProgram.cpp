@@ -37,11 +37,12 @@ void section1_warmup() {
     // -----------------------------------------------------------------------
 
     // TODO: Declare two int variables (a and b)
-
+    int a , b;
     // TODO: Prompt the user and read both values with cin
-
+    cout << "Enter two integers: ";
+    cin >>a >>b ;
     // TODO: Print "Sum = " followed by the result
-
+    cout << "Sum = " << (a + b) << endl;
     cout << endl;
 
     // -----------------------------------------------------------------------
@@ -52,11 +53,13 @@ void section1_warmup() {
     // -----------------------------------------------------------------------
 
     // TODO: Declare a double variable for Celsius
-
+    double celsius;
     // TODO: Prompt and read the value
-
+    cout << "Enter temperature in Celsius: ";
+    cin >> celsius;
     // TODO: Calculate Fahrenheit and print it
-
+    double fahrenheit = celsius * 9.0 /5.0 + 32.0;
+    cout << celsius << " C = " << fahrenheit << " F" <<endl;
     cout << endl;
 }
 
@@ -92,7 +95,7 @@ void section2_coreConcepts() {
 
     // --- Example (study this) ----------------------------------------------
     int age = 20;
-    if (age >= 18) {
+    if (age >= 18){
         cout << "Example: You are an adult." << endl;
     } else {
         cout << "Example: You are a minor." << endl;
@@ -116,17 +119,34 @@ void section2_coreConcepts() {
     // -----------------------------------------------------------------------
 
     // TODO: Declare an int variable
-
+    int num;
     // TODO: Prompt and read it
-
+    cout << "Enter a integer:  ";
+    cin >> num;
     // TODO: Use if / else if / else to print the correct message
-
+    if (num > 0) {
+        cout << num << " is positive" << endl;
+    }else if (num < 0){
+        cout << num << " is negative " << endl;
+    }else{
+        
+    }
     cout << endl;
 
     // -----------------------------------------------------------------------
     // Exercise 2.2
     // Ask the user for two integers. Using ONLY relational operators and
+    int x , y ;
+    cout << "Enter two integers: ";
+    cin >> x >> y ;
     // cout, print:
+    if (x == y) {
+        cout << " Equal " << endl;
+    }else if (x >y){
+        cout << "First is bigger " << endl;
+    }else{
+        cout << "Second is bigger" << endl;
+    }
     //   "Equal"        if they are the same
     //   "First is bigger"  if the first is larger
     //   "Second is bigger" otherwise
@@ -150,7 +170,17 @@ void section3_guidedExercises() {
     // -----------------------------------------------------------------------
     // Exercise 3.1 — Even or Odd
     // Ask the user for an integer. Print whether it is even or odd.
+    int number;
+    cout << "Enter a integer: " << endl;
+    cin >> number;
+    
+    if (number % 2 == 0){
+        cout << number << "is even." << endl;
+    }else{
+        cout << number << " is odd." <<endl;
+    }
     // Hint: use the modulus operator (%).
+    
     //   number % 2 == 0  means even.
     // -----------------------------------------------------------------------
 
@@ -161,6 +191,16 @@ void section3_guidedExercises() {
     // -----------------------------------------------------------------------
     // Exercise 3.2 — Simple Grade Calculator
     // Ask the user for a numeric score (0–100).
+    int grade;
+    cout << "Enter a grade " << endl;
+    cin >> grade ;
+    if (grade < 0 || grade < 100){
+        cout << "Invalid score ";
+    }else if (grade >90){
+        cout << "Grade A " << endl;
+    
+    
+    }
     // Print the letter grade using this scale:
     //   90–100 → A
     //   80–89  → B
@@ -178,6 +218,15 @@ void section3_guidedExercises() {
     // -----------------------------------------------------------------------
     // Exercise 3.3 — Leap Year Checker
     // Ask the user for a year (int).
+    int year;
+    cout << "Enter a year: " << endl;
+    cin >> year;
+    if ((year %4 == 0 && year % 100 != 0) || (year % 400 ==0)){
+        cout << year << " is a leap year. " << endl;
+    }else{
+        cout << year << " is not a leap year. " << endl;
+    }
+    
     // A year is a leap year if:
     //   (divisible by 4 AND not divisible by 100)
     //   OR divisible by 400
@@ -207,6 +256,17 @@ void section3_guidedExercises() {
     // -----------------------------------------------------------------------
 
     // TODO: Implement the triangle validator and classifier
+    double s1 , s2 , s3;
+    cout << "Enter three side lengths: " << endl;
+    cin >> s1 >> s2 >> s3;
+    
+        if (s1 + s2 > s3 && s1+ s3 > s2 && s2 + s3 > s1){
+        cout << "Valid triangle" ;
+        
+        if (s1 == s2 %% s2 == s3) {
+            cout << "Type: Equilateral" << endl;
+
+    }
 
     cout << endl;
 
